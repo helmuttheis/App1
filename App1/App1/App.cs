@@ -55,7 +55,7 @@ namespace App1
             Task.Run(async () =>
             {
                 HMS.Auth.Login hmsLogin = new HMS.Auth.LoginNTLM("http://192.168.30.109/NTLM", "winxmap", "authtest", "hello@123");
-                HMS.Auth.myHttpClient.hmsClient = hmsClient;
+                HMS.Auth.haHttpClient.hmsClient = hmsClient;
                 hmsLogin.setPlatform(this.platform);
                 ret = await hmsLogin.getJSON("data.json");
                 
